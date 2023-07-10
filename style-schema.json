@@ -1,0 +1,72 @@
+{
+  "definitions": {
+    "Style": {
+      "title": "Node Style",
+      "description": "Describes the appearance of metadata node and contains the descriptions of its children node styles.",
+      "type": "object",
+      "properties": {
+        "style": {
+          "title": "Style",
+          "description": "The style of the metadata node.",
+          "type": "object",
+          "required": false,
+          "properties": {
+            "random": {
+              "title": "Random style",
+              "description": "Setting of the random style",
+              "required": false,
+              "type": "boolean"
+            },
+            "colormap": {
+              "title": "Colormap",
+              "description": "Setting of the colormap for numerical values",
+              "required": false,
+              "type": "object",
+              "properties": {
+                "colors": {
+                  "description": "The colors of the colormap",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
+                  }
+                },
+                "min": {
+                  "description": "The minimum value of the colormap",
+                  "type": "number"
+                },
+                "max": {
+                  "description": "The maximum value of the colormap",
+                  "type": "number"
+                }
+              }
+            },
+            "categories": {
+              "title": "Categories",
+              "description": "Setting of the categories for categorical (string) values",
+              "required": false,
+              "type": "object",
+              "patternProperties": {
+                "^.*$": {
+                  "description": "The category value and corresponding color",
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                }
+              }
+            }
+          }
+        },
+        "children": {
+          "type": "object",
+          "description": "The styles of the children nodes, contains the titles of children nodes as keys and the their styles as values.",
+          "patternProperties": {
+            "^.*$": {
+              "$ref": "#/definitions/Style"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$ref": "#/definitions/Style"
+}
