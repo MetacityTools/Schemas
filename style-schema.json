@@ -48,7 +48,7 @@
               "type": "object",
               "patternProperties": {
                 "^.*$": {
-                  "description": "The category value and corresponding color",
+                  "description": "The category value as key and corresponding color",
                   "type": "string",
                   "pattern": "^#[0-9a-fA-F]{6}$"
                 }
@@ -61,6 +61,7 @@
           "description": "The styles of the children nodes, contains the titles of children nodes as keys and the their styles as values.",
           "patternProperties": {
             "^.*$": {
+              "description": "The child node title as key and the style of the child node as value",
               "$ref": "#/definitions/Style"
             }
           }
