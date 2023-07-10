@@ -17,13 +17,13 @@
               "required": false,
               "type": "boolean"
             },
-            "colormap": {
-              "title": "Colormap",
-              "description": "Setting of the colormap for numerical values",
+            "scalars": {
+              "title": "Scalars",
+              "description": "Setting of the colormap for scalar values",
               "required": false,
               "type": "object",
               "properties": {
-                "colors": {
+                "colormap": {
                   "description": "The colors of the colormap",
                   "type": "array",
                   "items": {
