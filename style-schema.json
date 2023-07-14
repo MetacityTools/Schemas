@@ -19,17 +19,18 @@
             },
             "scalars": {
               "title": "Scalars",
-              "description": "Setting of the colormap for scalar values",
+              "description": "Color mapping for scalar values",
               "required": false,
               "type": "object",
               "properties": {
                 "colormap": {
                   "description": "The colors of the colormap",
-                  "type": "array",
+                  "type": ["array", "string"],
                   "items": {
                     "type": "string",
                     "pattern": "^#[0-9a-fA-F]{6}$"
-                  }
+                  },
+                  "enum": ["jet", "plasma", "viridis"]
                 },
                 "min": {
                   "description": "The minimum value of the colormap",
@@ -43,7 +44,7 @@
             },
             "categories": {
               "title": "Categories",
-              "description": "Setting of the categories for categorical (string) values",
+              "description": "Color mapping for categorical (string) values",
               "required": false,
               "type": "object",
               "patternProperties": {
