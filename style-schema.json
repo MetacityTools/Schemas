@@ -25,7 +25,7 @@
               "properties": {
                 "colormap": {
                   "description": "The colors of the colormap",
-                  "anyOf": [
+                  "oneOf": [
                     {
                       "type": "string",
                       "enum": ["jet", "plasma", "viridis"]
