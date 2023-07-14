@@ -28,7 +28,7 @@
                   "oneOf": [
                     {
                       "type": "string",
-                      "enum": ["jet", "plasma", "viridis"],
+                      "enum": ["plasma", "viridis", "inferno", "magma"],
                       "required": false
                     },
                     {
