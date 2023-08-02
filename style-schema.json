@@ -11,12 +11,6 @@
           "type": "object",
           "required": false,
           "properties": {
-            "random": {
-              "title": "Random style",
-              "description": "Setting of the random style",
-              "required": false,
-              "type": "boolean"
-            },
             "scalars": {
               "title": "Scalars",
               "description": "Color mapping for scalar values",
